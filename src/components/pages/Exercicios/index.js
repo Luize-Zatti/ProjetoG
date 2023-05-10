@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, View, ScrollView, StyleSheet } from 'react-native';
 import { Text, Card, Button, Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
+import Ionicons from "@expo/vector-icons";
 
 const Exercicios = () => {
 
@@ -23,15 +24,7 @@ const Exercicios = () => {
                         <Button
                             title="Saiba Mais"
                             onPress={() => navigation.navigate("Agachamento")}
-                            icon={
-                                <Icon
-                                    name="checkmark-circle-outline"
-                                    type="ionicon"
-                                    color="#ffffff"
-                                    iconStyle={{ marginLeft: 10 }}
-                                />
-                            }
-                            iconRight
+                            
                         />
 
                     </Card>
@@ -49,15 +42,7 @@ const Exercicios = () => {
                         <Button
                             title="Saiba Mais"
                             onPress={() => navigation.navigate("Skipping")}
-                            icon={
-                                <Icon
-                                    name="checkmark-circle-outline"
-                                    type="ionicon"
-                                    color="#ffffff"
-                                    iconStyle={{ marginLeft: 10 }}
-                                />
-                            }
-                            iconRight
+                           
                         />
 
                     </Card>
@@ -75,15 +60,7 @@ const Exercicios = () => {
                         <Button
                             title="Saiba Mais"
                             onPress={() => navigation.navigate("Abdominal Borboleta")}
-                            icon={
-                                <Icon
-                                    name="checkmark-circle-outline"
-                                    type="ionicon"
-                                    color="#ffffff"
-                                    iconStyle={{ marginLeft: 10 }}
-                                />
-                            }
-                            iconRight
+                            
                         />
 
                     </Card>
