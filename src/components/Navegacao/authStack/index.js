@@ -11,7 +11,7 @@ import AbdominalB from "./src/components/pages/AbdominalBorboleta";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function  AuthNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
