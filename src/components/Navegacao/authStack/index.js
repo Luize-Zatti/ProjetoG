@@ -1,34 +1,42 @@
-import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import DrawerNavigator from '../Drawer';
+import BemVindo from '../../pages/BemVindo';
+import Exercicios from '../../pages/Exercicios';
+import AbdominalB from '../../pages/AbdominalBorboleta';
 
+const Stack = createStackNavigator();
+// Navigator, Screen, Group
 
-import BemVindo from "../../pages/BemVindo";
-import Exercicios from "../../pages/Exercicios";
-import Agachamento from "../../pages/Agachamento";
-import Skipping from "../../pages/Skipping";
-import AbdominalB from "../../pages/AbdominalBorboleta";
-import DrawerNavigator from "../Drawer";
-
-
-const Stack = createNativeStackNavigator();
-
-export default function  AuthNavigator() {
+function AuthNavigator() {
+  console.log(Stack);
   return (
-      <Stack.Navigator >
-        <Stack.Screen name="BemVindo" component={BemVindo} options={{ headerShown: false }} />
-        <Stack.Screen name="Exercicios" component={Exercicios} options={({route}) => ({
-        headerTintColor: "#575454",
-        // headerBackTitle: 'Back',
-        headerBackTitleVisible: false,
-        headerStyle: {
-          backgroundColor: '#ecf0f1',
-        },
-      })}/>
-        <Stack.Screen name="Agachamento" component={Agachamento} />
-        <Stack.Screen name="Skipping" component={Skipping} />
-        <Stack.Screen name="Abdominal Borboleta" component={AbdominalB}/>
-        <Stack.Screen name="Drawer" component={DrawerNavigator}/>
-      </Stack.Navigator>
+    <Stack.Navigator screenOptions={{}} initialRouteName={BemVindo}>
+      <Stack.Screen
+        name={"Exercicios"}
+        component={Exercicios}
+        options={({route}) => ({
+          headerTintColor: "white",
+          // headerBackTitle: 'Back',
+          headerBackTitleVisible: false,
+          headerStyle: {
+            backgroundColor: "blue",
+          },
+        })}
+      />
+
+      <Stack.Screen
+        name={"Bem Vindo"}
+        component={BemVindo}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={"Abdominal Borboleta"}
+        component={DrawerNavigator}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
   );
 }
+
+export default AuthNavigator;
