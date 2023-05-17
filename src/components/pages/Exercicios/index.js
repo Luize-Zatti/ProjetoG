@@ -85,7 +85,6 @@ const Exercicios = () => {
                             onPress={() => navigation.navigate("Agachamento com Salto")}
                         />
                     </Card>
-
                 </View>
             </ScrollView>
         </SafeAreaView>

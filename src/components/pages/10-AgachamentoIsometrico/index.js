@@ -3,8 +3,7 @@ import React from 'react'
 
 export default function AgachamentoIso() {
     return (
-        <View>
-            <Image source={require("")} />
+        <View>       
             <Text>Dança gatinho</Text>
         </View>
     )
