@@ -6,19 +6,20 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import BemVindo from './src/components/pages/BemVindo';
 import Exercicios from './src/components/pages/Exercicios';
-import Agachamento from './src/components/pages/1-Agachamento';
-import Skipping from './src/components/pages/2-Skipping';
-import AbdominalB from './src/components/pages/3-AbdominalBorboleta';
-import Ponte from './src/components/pages/4-Ponte';
-import AgachamentocSalto from './src/components/pages/5-AgachamentocSalto';
-import Triceps from './src/components/pages/6-triceps';
-import Salto from './src/components/pages/7-Salto';
-import Prancha from './src/components/pages/8-prancha';
-import Panturrilha from './src/components/pages/9-Panturrilha';
-import AgachamentoIso from './src/components/pages/10-AgachamentoIsometrico';
-import Polichinelo from './src/components/pages/11-Polichinelo';
-import Avanco from './src/components/pages/12-Avanco';
-import Mobilidade from './src/components/pages/13-MobilidadeEscapula';
+import Agachamento from './src/components/pages/Agachamento';
+import Skipping from './src/components/pages/Skipping';
+import AbdominalB from './src/components/pages/AbdominalBorboleta';
+import Ponte from './src/components/pages/Ponte';
+import AgachamentocSalto from './src/components/pages/AgachamentocSalto';
+import Triceps from './src/components/pages/triceps';
+import Salto from './src/components/pages/Salto';
+import Prancha from './src/components/pages/prancha';
+import Panturrilha from './src/components/pages/Panturrilha';
+import AgachamentoIso from './src/components/pages/AgachamentoIsometrico';
+import Polichinelo from './src/components/pages/Polichinelo';
+import Avanco from './src/components/pages/Avanco';
+import Mobilidade from './src/components/pages/MobilidadeEscapula';
+import Referencias from './src/components/pages/Referencias';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -59,7 +60,8 @@ function AppDrawer() {
       <Drawer.Screen name="Agachamento isométrico" component={AgachamentoIso} />
       <Drawer.Screen name="Polichinelo" component={Polichinelo} />
       <Drawer.Screen name="Avanço" component={Avanco} />
-      <Drawer.Screen name="Mobilidade Escápula" component={Mobilidade} />
+      <Drawer.Screen name="Mobilidade de Escápula" component={Mobilidade} />
+      <Drawer.Screen name="Referências" component={Referencias} />
     </Drawer.Navigator>
   );
 }
